@@ -21,7 +21,6 @@ function CreateProduct() {
       function getcategories(){
         fetch("https://ecomback-joyb.onrender.com/category/all-categories").then((res1)=>{
           res1.json().then((res2)=>{
-            console.log(res2);
             setCategories(res2.categories)
           })
         })
@@ -40,7 +39,6 @@ function CreateProduct() {
         prod.append("description",description)
         prod.append("category",category)
         prod.append("photo",photo)
-        console.log(prod);
         
         fetch("https://ecomback-joyb.onrender.com/product/create-product",{
           method:"post",
@@ -50,7 +48,6 @@ function CreateProduct() {
           body:prod
         }).then((res1)=>{
           res1.json().then((res2)=>{
-            console.log(res2);
             navigate('/dashboard/admin/products')
             
           })
