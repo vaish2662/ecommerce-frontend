@@ -22,7 +22,6 @@ function Signin() {
       body: JSON.stringify(user)
     }).then((res1)=>{
         res1.json().then((res2)=>{
-            console.log(res2)
             if(res2.Error){
               alert(res2.Error)
             }else{
