@@ -17,7 +17,6 @@ function Home() {
     function getallprods() {
       fetch("https://ecomback-joyb.onrender.com/product/all-products").then((res1) => {
         res1.json().then((res2) => {
-          console.log(res2);
           setProducts(res2.products);
         });
       });
@@ -29,7 +28,6 @@ function Home() {
       function getcategories(){
         fetch("https://ecomback-joyb.onrender.com/category/all-categories").then((res1)=>{
           res1.json().then((res2)=>{
-            console.log("category",res2);
             setCategories(res2.categories)
           })
         })
@@ -54,8 +52,7 @@ function Home() {
   }
 
   function handleFilter(value,id){
-    console.log(value,id);
-    
+
     let all=[...checked]
     if(value){
       all.push(id)
@@ -76,7 +73,6 @@ function Home() {
       body:JSON.stringify(data)
      }).then((res1)=>{
           res1.json().then((res2)=>{
-            console.log(res2);
             setProducts(res2.products)
           })
         })
