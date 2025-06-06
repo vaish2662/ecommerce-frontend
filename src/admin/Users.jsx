@@ -9,7 +9,6 @@ function Users() {
   function getusers(){
     fetch("https://ecomback-joyb.onrender.com/auth/allusers").then((res1)=>{
       res1.json().then((res2)=>{
-        console.log(res2.allusers);
         setAllusers(res2.allusers)
         
       })
