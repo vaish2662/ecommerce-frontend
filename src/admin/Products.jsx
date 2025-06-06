@@ -14,7 +14,6 @@ function Products() {
   function getallprods() {
     fetch("https://ecomback-joyb.onrender.com/product/all-products").then((res1) => {
       res1.json().then((res2) => {
-        console.log(res2);
         setProducts(res2.products);
       });
     });
