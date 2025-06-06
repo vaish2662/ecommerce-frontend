@@ -21,7 +21,6 @@ function Forgotpass() {
                     body:JSON.stringify(u)
                 }).then((res1)=>{
                     res1.json().then((res2)=>{
-                        console.log(res2)
                         alert("Password reset successfully")                        
                         navigate('/signin')
                     })
