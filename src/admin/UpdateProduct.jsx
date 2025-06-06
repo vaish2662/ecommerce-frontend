@@ -25,7 +25,6 @@ function UpdateProduct() {
           function getcategories(){
             fetch("https://ecomback-joyb.onrender.com/category/all-categories").then((res1)=>{
               res1.json().then((res2)=>{
-                console.log(res2);
                 setCategories(res2.categories)
               })
             })
@@ -38,7 +37,6 @@ function UpdateProduct() {
           function getSingleprod(){
             fetch(`https://ecomback-joyb.onrender.com/product/single-product/${params.slug}`).then((res1)=>{
                 res1.json().then((res2)=>{
-                    console.log("res2",res2);
                     setName(res2.products.name)
                     setPrice(res2.products.price)
                     setQuantity(res2.products.quantity)
@@ -62,8 +60,7 @@ function UpdateProduct() {
             prod.append("description",description)
             prod.append("category",category)
             prod.append("photo",photo)
-            console.log(prod);
-            
+
             fetch(`https://ecomback-joyb.onrender.com/product/update-product/${id}`,{
               method:"put",
               headers:{
@@ -72,7 +69,6 @@ function UpdateProduct() {
               body:prod
             }).then((res1)=>{
               res1.json().then((res2)=>{
-                console.log(res2);
                 navigate('/dashboard/admin/products')
                 
               })
@@ -87,7 +83,6 @@ function UpdateProduct() {
                 }
             }).then((res1)=>{
                 res1.json().then((res2)=>{
-                    console.log(res2);
                     navigate("/dashboard/admin/products")
                     
                 })
