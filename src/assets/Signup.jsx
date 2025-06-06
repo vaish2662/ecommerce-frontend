@@ -23,7 +23,6 @@ let navigate= useNavigate()
       body: JSON.stringify(user)
     }).then((res1)=>{
         res1.json().then((res2)=>{
-            console.log(res2);
            navigate('/signin')
         })
     })
