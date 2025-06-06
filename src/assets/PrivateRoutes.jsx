@@ -13,7 +13,6 @@ function PrivateRoutes() {
                 }
             }).then((res1)=>{
                 res1.json().then((res2)=>{
-                    console.log(res2);
                     if(res1.ok){
                         setOk(true)
                     }else{
