@@ -24,7 +24,6 @@ function CreateCategory() {
   function getcategories(){
     fetch("https://ecomback-joyb.onrender.com/category/all-categories").then((res1)=>{
       res1.json().then((res2)=>{
-        console.log(res2);
         setCategories(res2.categories)
       })
     })
@@ -46,8 +45,6 @@ function CreateCategory() {
       body:JSON.stringify(data)
     }).then((res1)=>{
       res1.json().then((res2)=>{
-        console.log(res2);
-        
         getcategories()
       })
     })
@@ -65,7 +62,6 @@ function CreateCategory() {
       body:JSON.stringify(data)
     }).then((res1)=>{
       res1.json().then((res2)=>{
-        console.log(res2);
         setSelected(null)
         setUpdatedName("")
         setShow(false)
@@ -83,7 +79,6 @@ fetch(`https://ecomback-joyb.onrender.com/category/delete-category/${id}`,{
     },
   }).then((res1)=>{
     res1.json().then((res2)=>{
-      console.log(res2);
       getcategories()
     })
   })
