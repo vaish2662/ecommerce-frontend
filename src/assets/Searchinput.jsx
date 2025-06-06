@@ -13,7 +13,6 @@ function Searchinput() {
     e.preventDefault()
     fetch(`https://ecomback-joyb.onrender.com/product/search-product/${values.keyword}`).then((res1)=>{
         res1.json().then((res2)=>{
-            console.log(res2);
             setValues({...values,result:res2})
             navigate('/search')
         })
