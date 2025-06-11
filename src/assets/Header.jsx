@@ -42,11 +42,12 @@ function Header() {
                 <NavLink
                   to={`/dashboard/${auth.user.role === 1 ? "admin" : "user"}`}
                   className="dropdown-item"
+                   style={{ color: "black" }}
                 >
                   Dashboard
                 </NavLink>
                 <NavDropdown.Divider />
-                <NavDropdown.Item as={NavLink} to="/signin" onClick={handleLogout}>
+                <NavDropdown.Item as={NavLink} to="/signin" onClick={handleLogout}  style={{ color: "black" }}>
                   Sign Out
                 </NavDropdown.Item>
               </NavDropdown>
